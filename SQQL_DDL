@@ -1,0 +1,98 @@
+create DATABASE dstest;
+
+use dstest;
+
+CREATE TABLE station (
+    ID int,
+    city varchar(255),
+    state varchar(255),
+    lat_n varchar(255),
+    lat_w varchar(255)
+);
+
+
+insert into station values (794 , 'Kissee Mills', 'MO', 139, 73);
+
+insert into station values (824, 'Loma Mar','CA', 48, 130);
+
+insert into station values (603, 'Sandy Hook', 'CT', 72 ,148) ;
+
+insert into station values (478, 'Tipton', 'IN', 33, 97);
+
+insert into station values (619, 'Arlington','CO', 75, 92);
+
+insert into station values (711, 'Turner', 'AR', 50, 101);
+
+insert into station values (839, 'Slidell', 'LA', 85, 151); 
+
+insert into station values (411, 'Negreet', 'LA', 98 ,105);
+
+insert into station values (588, 'Glencoe', 'KY', 46, 136);
+
+insert into station values (588, 'Alencoe', 'KY', 46, 136);
+
+
+CREATE TABLE product (
+    product_id int,
+    product_name varchar(255),
+    unit_price varchar(255)
+);
+
+insert into product values (1, 'S8', 1000);
+insert into product values (2, 'G4', 800 );
+insert into product values (3, 'iPhone', 1400);
+
+
+
+CREATE TABLE sales (
+    seller_id int,
+    product_id int,
+    buyer_id int,
+	sale_date date,
+    quantity int,
+	price int
+);
+
+insert into sales values (1, 1, 1 ,'2019-01-21', 2, 2000);
+insert into sales values (1, 2 ,2 ,'2019-02-17', 1, 800);
+insert into sales values (2, 2 ,3, '2019-06-02', 1, 800); 
+insert into sales values (3, 3 ,4 ,'2019-05-13', 2, 2800); 
+
+
+------------------------------Q18---------------------------------------
+CREATE TABLE views (
+    article_id int,
+    author_id int,
+    viewer_id int,
+	view_date date
+);
+
+
+insert into views values (1 ,3 ,5 ,'2019-08-01');
+insert into views values (1 ,3 ,6 ,'2019-08-02'); 
+insert into views values (2 ,7 ,7 ,'2019-08-01'); 
+insert into views values (2 ,7 ,6 ,'2019-08-02'); 
+insert into views values (4 ,7 ,1 ,'2019-07-22'); 
+insert into views values (3 ,4 ,4 ,'2019-07-21'); 
+insert into views values (3 ,4 ,4 ,'2019-07-21');
+
+----------------------Q19-------------------------------------------------
+
+CREATE TABLE delivery (
+    delivery_id int,
+    customer_id int,
+    order_date date,
+	customer_pref_delivery_date date
+);
+
+insert into delivery values (1 ,1 ,'2019-08-01' ,'2019-08-02');
+insert into delivery values (2 ,5 ,'2019-08-02' ,'2019-08-02'); 
+insert into delivery values (3 ,1 ,'2019-08-11' ,'2019-08-11');  
+insert into delivery values (4 ,3 ,'2019-08-24' ,'2019-08-26'); 
+insert into delivery values (5 ,4 ,'2019-08-21' ,'2019-08-22');  
+insert into delivery values (6 ,2 ,'2019-08-11' ,'2019-08-13');  
+
+
+
+
+
